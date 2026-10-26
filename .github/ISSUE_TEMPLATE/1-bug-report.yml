@@ -1,0 +1,99 @@
+name: Bug report
+description: Something is broken, shows an error, or gives the wrong result.
+title: "[Bug] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting this. Please don't include passwords, bank or card numbers,
+        NRIC/FIN numbers or salary details, and blur them out of screenshots.
+  - type: dropdown
+    id: module
+    attributes:
+      label: Module
+      description: Where in TOM did this happen?
+      options:
+        - Sales
+        - CRM
+        - Customers
+        - Purchases and Payables
+        - Inventory
+        - Production
+        - Project Management
+        - Financial and Accounting
+        - Bank
+        - HR
+        - Payroll
+        - Employee Self-Service
+        - Reports
+        - Masters and Setup
+        - Admin (users and roles)
+        - Data Migration
+        - Notifications or Search
+        - Sign-in or My Account
+        - Other or not sure
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: How badly does this affect your work?
+      options:
+        - Blocking – I can't do my work at all
+        - High – wrong numbers, amounts or data
+        - Medium – it's a problem, but I have a workaround
+        - Low – cosmetic or minor
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Page link
+      description: Copy the address from your browser's address bar.
+      placeholder: https://...
+  - type: input
+    id: record
+    attributes:
+      label: Record or document number
+      description: For example the invoice, sales order, PO, or employee number involved.
+  - type: textarea
+    id: steps
+    attributes:
+      label: What did you do?
+      description: List the steps in order so we can repeat them.
+      placeholder: |
+        1. Opened ...
+        2. Clicked ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What actually happened?
+      description: Include the exact wording of any error message.
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Paste or drag images here.
+  - type: input
+    id: when
+    attributes:
+      label: When did it happen?
+      description: Date and approximate time, and whether it happens every time.
+      placeholder: 26 Oct, around 3 pm; happens every time
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and device
+      placeholder: Chrome on Windows laptop

@@ -1,0 +1,64 @@
+name: Feature or change request
+description: Ask for something new, or for something to work differently.
+title: "[Request] "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: dropdown
+    id: module
+    attributes:
+      label: Module
+      options:
+        - Sales
+        - CRM
+        - Customers
+        - Purchases and Payables
+        - Inventory
+        - Production
+        - Project Management
+        - Financial and Accounting
+        - Bank
+        - HR
+        - Payroll
+        - Employee Self-Service
+        - Reports
+        - Masters and Setup
+        - Admin (users and roles)
+        - Data Migration
+        - Notifications or Search
+        - Sign-in or My Account
+        - Other or not sure
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: Describe the task and what makes it hard or slow today.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like TOM to do?
+      description: Describe the change. Examples, sample documents or sketches help.
+    validations:
+      required: true
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: How important is this?
+      options:
+        - Needed for a deadline or a legal or compliance requirement
+        - Would save significant time
+        - Nice to have
+    validations:
+      required: true
+  - type: input
+    id: deadline
+    attributes:
+      label: Deadline, if any
+  - type: textarea
+    id: who
+    attributes:
+      label: Who else would use this?
+      description: Teams or roles that would benefit.

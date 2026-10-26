@@ -1,0 +1,45 @@
+name: Access problem
+description: You can't open a page, see a record, or use a button you need.
+title: "[Access] "
+labels: ["access", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this when TOM says you don't have permission, or something you need is missing
+        from your menu. Never share your password here.
+  - type: input
+    id: user
+    attributes:
+      label: Your name and the email you sign in with
+    validations:
+      required: true
+  - type: input
+    id: role
+    attributes:
+      label: Your team or job role
+      placeholder: Finance executive
+    validations:
+      required: true
+  - type: textarea
+    id: need
+    attributes:
+      label: What do you need to do?
+      description: The page, record or action you can't reach, and why you need it for your work.
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Page link
+      placeholder: https://...
+  - type: textarea
+    id: message
+    attributes:
+      label: What do you see instead?
+      description: The message shown, or describe what's missing. A screenshot helps.
+  - type: input
+    id: approver
+    attributes:
+      label: Who approved this access?
+      description: Your manager or the person who can confirm you should have it.

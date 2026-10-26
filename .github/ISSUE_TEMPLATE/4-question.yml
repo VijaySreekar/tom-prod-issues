@@ -1,0 +1,17 @@
+name: Question
+description: You're not sure how something in TOM works.
+title: "[Question] "
+labels: ["question"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+      description: Mention the module and page, and what you're trying to achieve.
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Page link
+      placeholder: https://...
